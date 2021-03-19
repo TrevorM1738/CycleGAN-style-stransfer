@@ -22,66 +22,52 @@ monet painting:
 
 photograph:
 
-<img src="https://github.com/Ericusick/Chest-X-Ray-Image_Classification/blob/main/Pictures%20for%20non-technical/pneumonia.jpg" width="400" height="400" />
+<img src="pictures/1baf74b1a7.jpg" width="400" height="400" />
 
 ### Data Imbalance
 
-Upon further inspection of the datasets we found that there is a severe class imbalance within the train set and test set. Where the cases of pneumonia is oversaturated in comparison to the normal cases. Which can skew the results for our image classification models.
+These is a data imbalnce with about 700 monet style paintings and 7000 photographs.    
 
-__Train Set__
+## Modeling Process for CycleGANs
+<img align="right" src="pictures/unnamed.png">
+- create 4 CNN two genorators and two discrimintors
 
-<img src="https://github.com/Ericusick/Chest-X-Ray-Image_Classification/blob/main/Pictures%20for%20non-technical/Test%20Imbalance.PNG" width="400" height="400" />
+- Resized all of the images to 256 X 256 pixels for consistency  
 
-__Test Set__
+- Created batch size of 300 for each datasets
 
-<img src="https://github.com/Ericusick/Chest-X-Ray-Image_Classification/blob/main/Pictures%20for%20non-technical/Train%20Imbalance.PNG" width="400" height="400" />
+- The first genortor turns pictures into monets the second turns monets into pictures
 
-__Validation Set__
+- The first discriminator checks to see if it is a painting or not the second check toy see if it is photo or not
 
-<img src="https://github.com/Ericusick/Chest-X-Ray-Image_Classification/blob/main/Pictures%20for%20non-technical/Val%20Imbalance.PNG" width="400" height="400" />
+### Final CycleGANs Model
 
-This is good to keep in mind when we make our models. Without changes to the class imbalance, the model could be high in accuracy however the machine may be more likely to predict every images it sees as positive for pneumonia. We gave the normal cases more weight to help gain equality in class balance for the final modeling process.  
+<img src="pictures/download.png" width="400" height="400" />
 
-## Modeling Process for CNN
+It was hard to determ when to stop training I decided to stop after 250 epochs where I was happy with most of the results from the genorator.The results were very tricky to interpret. Because there is not clear cut way to determine the results without looking at each photo individually. I found that most of the time it did the best when it was a picture of a landscape while failing on pictures of people.
 
-- Convert all X-ray images to grayscale so that the model will run more efficiently
+<img src="pictures/13.jpg" width="400" height="400" />
+<img src="pictures/21.jpg" width="400" height="400" />
+<img src="pictures/54.jpg" width="400" height="400" />
+<img src="pictures/24.jpg" width="400" height="400" />
 
-- Resized all of the images to 128 X 128 pixels for consistency  
-
-- Created batch size for each datasets
-
-- Gave more ‘weight’ to the normal cases to balance the class imbalance
-
-- Created multiple layers for the neural networks
-
-### Final CNN Model
-
-<img align="right" src="https://github.com/Ericusick/Chest-X-Ray-Image_Classification/blob/main/Pictures%20for%20non-technical/Final%20CNN%20Graphs.PNG">
-
-__Final model results:__
-
-- Training Accuracy: 99.56%
-
-- Training Loss: 0.0191
-
-- Validation Accuracy: 93.75%
-
-- Validation Loss: 0.1840
-
-Our accuracy is good in this model but with more training data, tweaking the layers, and messing with other parameters, we can lower the validation loss but due to time time constraint we were unable to achieve it. Also our validation set was small which can be a reason why the graphs looks inconsistent, to fix this issue we may want to add more validation data/images to solve this issue. In return, paint a clearer performance of the model.
-
+These are a good explme of the times it doies a really good job and when it fails to tranfer the style.  
 ---
 
 ## Recommendations and Future Work 
 
 Looking at the model, we would recommend:
 
-We would recommend the radiologist to use this as a supplementary tool to speed up the diagnostic process and it can be use as a secondary opinion.
+We would recommend using this a filter for landscapes mostly to get the best resuls and most aesthetically pleasing images. 
 
 ### Future Work:
 
-- Get more data for the validation set to gain a better/realistic model accuracy
+- Get more pictures of monets to use to train on.
 
-- Trying/explore different parameters and layers for the neural network modeling
+- Do more models to try and optimize results testing more epochs.
 
-- Create more unique images by augmenting some of given data to give the machine more data to train from
+- Try and find different more urban and people focused monets to improve results in those situations. 
+
+### Link To Data Set 
+
+https://www.kaggle.com/c/gan-getting-started/data
