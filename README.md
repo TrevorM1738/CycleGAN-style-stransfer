@@ -9,9 +9,9 @@ In this project we take in a dataset with images of monet paintings and pictures
 
 ## Business Case
 
-Can you train a model to turn landscapes into monet style paintings for a social media filter? I used a data set from kaggle
+Can you train a model to turn landscapes into monet style paintings for a social media filter? 
 
-- do style transfer using a CycleGANs
+- Use picture of Monet painting and photographs to make pictures look like monet paintings. 
 
 ## Exploratory Data Analysis
 
