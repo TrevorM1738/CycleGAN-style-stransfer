@@ -62,7 +62,7 @@ We would recommend using this a filter for landscapes mostly to get the best res
 
 ### Future Work:
 
-- Get more pictures of monets to use to train on.
+- Get more pictures of monets to use to train the GAN on.
 
 - Do more models to try and optimize results testing more epochs.
 
