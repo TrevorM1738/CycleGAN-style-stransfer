@@ -51,7 +51,7 @@ It was hard to determ when to stop training I decided to stop after 250 epochs w
 <img src="pictures/54.jpg" width="400" height="400" />
 <img src="pictures/24.jpg" width="400" height="400" />
 
-These are a good example of the times it does a really good job and when it fails to tranfer the style.  
+These are a good example of the times it does a really good job and when it fails to tranfer the style properly.  
 ---
 
 ## Recommendations and Future Work 
