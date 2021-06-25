@@ -1,4 +1,4 @@
-# CycleGAN-style-stransfer
+# CycleGAN-style-stransfe
 
 ## Contributors
 - Trevor Mott
