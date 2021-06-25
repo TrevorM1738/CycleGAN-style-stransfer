@@ -66,7 +66,7 @@ We would recommend using this a filter for landscapes mostly to get the best res
 
 - Do more models to try and optimize results testing more epochs.
 
-- Try and find different more urban and people focused monets to improve results in those situations. 
+- Try and find diferent more urban and people focused monets to improve results in those situations. 
 
 ### Link To Data Set 
 
