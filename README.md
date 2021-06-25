@@ -13,7 +13,7 @@ Can you train a model to turn landscapes into monet style paintings for a social
 
 - Use picture of Monet painting and photographs to make pictures look like monet paintings. 
 
-## Exploratory Dat Analysis
+## Exploratory Data Analysis
 
 
 monet painting:
